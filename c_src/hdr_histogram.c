@@ -582,13 +582,13 @@ static void format_line_string(char* str, int len, int significant_figures, form
     switch (format)
     {
         case CSV:
-            snprintf(str, len, format_str, "%.", significant_figures, "f,%f,%d,%.2f\n");
+            snprintf(str, len, format_str, "%.", significant_figures, "f,%f,%d,%.2f\r\n");
             break;
         case CLASSIC:
-            snprintf(str, len, format_str, "%12.", significant_figures, "f %12f %12d %12.2f\n");
+            snprintf(str, len, format_str, "%12.", significant_figures, "f %12f %12d %12.2f\r\n");
             break;
         default:
-            snprintf(str, len, format_str, "%12.", significant_figures, "f %12f %12d %12.2f\n");
+            snprintf(str, len, format_str, "%12.", significant_figures, "f %12f %12d %12.2f\r\n");
     }
 }
 
@@ -599,9 +599,9 @@ static const char* format_head_string(format_type format)
         case CSV:
             return "%s,%s,%s,%s\n";
         case CLASSIC:
-            return "%12s %12s %12s %12s\n\n";
+            return "%12s %12s %12s %12s\r\n\r\n";
         default:
-            return "%12s %12s %12s %12s\n\n";
+            return "%12s %12s %12s %12s\r\n\r\n";
     }
 }
 
