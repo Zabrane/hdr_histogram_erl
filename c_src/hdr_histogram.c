@@ -585,10 +585,10 @@ static void format_line_string(char* str, int len, int significant_figures, form
             snprintf(str, len, format_str, "%.", significant_figures, "f,%f,%d,%.2f\r\n");
             break;
         case CLASSIC:
-            snprintf(str, len, format_str, "%12.", significant_figures, "f %12f %12d %12.2f\r\n");
+            snprintf(str, len, format_str, "%12.", significant_figures, "f %12f %12d %12.2f\n");
             break;
         default:
-            snprintf(str, len, format_str, "%12.", significant_figures, "f %12f %12d %12.2f\r\n");
+            snprintf(str, len, format_str, "%12.", significant_figures, "f %12f %12d %12.2f\n");
     }
 }
 
