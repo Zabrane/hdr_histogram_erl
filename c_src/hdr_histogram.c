@@ -624,7 +624,7 @@ int hdr_percentiles_print(
 
     if (fprintf(
         stream, head_format,
-        "Value", "Percentile", "TotalCount", "1/(1-Percentile)") < 0)
+        "Value", "Percentile", "TotalCount", "1/(1-Percentile)\r\n") < 0)
     {
         rc = EIO;
         goto cleanup;
